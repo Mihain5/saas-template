@@ -1,0 +1,127 @@
+{
+  "project": {
+    "name": "SaaS template Setup",
+    "description": "Setup guide for the no-code SaaS template with multi-tenancy, RLS, and cloud-only deployment."
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "title": "MCP Configuration (Supabase & Clerk)",
+      "description": "Set up MCP tools for cloud development (Supabase MCP, Clerk MCP, GitHub MCP).",
+      "subtasks": [
+        {
+          "id": "1.1",
+          "title": "Configure Supabase MCP",
+          "description": "Set up Supabase MCP for database management. You need your Supabase project URL and anon key from your manually created Supabase project.",
+          "status": "pending"
+        },
+        {
+          "id": "1.2",
+          "title": "Configure Clerk MCP",
+          "description": "Set up Clerk MCP for authentication management. You need your Clerk API keys from your manually created Clerk project.",
+          "status": "pending"
+        },
+        {
+          "id": "1.3",
+          "title": "Configure GitHub MCP",
+          "description": "Set up GitHub MCP for repository management.",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Create Supabase Project Manually",
+      "description": "Create a new Supabase project via the supabase.com dashboard. Copy the project URL and anon key, which will be used for MCP and environment variables.",
+      "subtasks": [
+        {
+          "id": "2.1",
+          "title": "Create Supabase Project",
+          "description": "Create the project in the Supabase dashboard.",
+          "status": "pending"
+        },
+        {
+          "id": "2.2",
+          "title": "Copy Project URL and Anon Key",
+          "description": "Locate and save the Supabase project URL and anon key.",
+          "status": "pending"
+        },
+        {
+          "id": "2.3",
+          "title": "Configure Database Schema",
+          "description": "Set up the database schema with RLS policies (follow the guides).",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Create Clerk Project Manually",
+      "description": "Create a new Clerk project via the clerk.com dashboard. Copy the API keys, which will be used for MCP and environment variables.",
+      "subtasks": [
+        {
+          "id": "3.1",
+          "title": "Create Clerk Project",
+          "description": "Create the project in the Clerk dashboard.",
+          "status": "pending"
+        },
+        {
+          "id": "3.2",
+          "title": "Copy Clerk API Keys",
+          "description": "Locate and save the Clerk API keys.",
+          "status": "pending"
+        },
+        {
+          "id": "3.3",
+          "title": "Configure User Roles",
+          "description": "Set up user roles (super_admin, company_admin, company_user, customer).",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Final Verification",
+      "description": "Verify all components are working correctly.",
+      "subtasks": [
+        {
+          "id": "4.1",
+          "title": "Test Authentication",
+          "description": "Verify Clerk authentication is working.",
+          "status": "pending"
+        },
+        {
+          "id": "4.2",
+          "title": "Test Database Access",
+          "description": "Verify Supabase connection and RLS policies.",
+          "status": "pending"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Documentation Review",
+      "description": "Review and understand the template documentation.",
+      "subtasks": [
+        {
+          "id": "5.1",
+          "title": "Read Setup Guides",
+          "description": "Review all setup guides in the /docs folder.",
+          "status": "pending"
+        },
+        {
+          "id": "5.2",
+          "title": "Understand Business Rules",
+          "description": "Review business rules and multi-tenancy setup.",
+          "status": "pending"
+        },
+        {
+          "id": "5.3",
+          "title": "Review Troubleshooting Guide",
+          "description": "Familiarize yourself with common issues and solutions.",
+          "status": "pending"
+        }
+      ]
+    }
+  ]
+} 
