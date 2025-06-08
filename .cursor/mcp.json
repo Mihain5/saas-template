@@ -1,0 +1,60 @@
+{
+    "mcpServers": {
+        "taskmaster-ai": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "--package=task-master-ai",
+                "task-master-ai"
+            ],
+            "env": {
+                "ANTHROPIC_API_KEY": "[YOUR_ANTHROPIC_API_KEY]",
+                "PERPLEXITY_API_KEY": "[YOUR_PERPLEXITY_API_KEY_OPTIONAL]",
+                "OPENAI_API_KEY": "[YOUR_OPENAI_API_KEY]",
+                "GOOGLE_API_KEY": "GOOGLE_API_KEY_HERE",
+                "XAI_API_KEY": "XAI_API_KEY_HERE",
+                "OPENROUTER_API_KEY": "OPENROUTER_API_KEY_HERE",
+                "MISTRAL_API_KEY": "MISTRAL_API_KEY_HERE",
+                "AZURE_OPENAI_API_KEY": "AZURE_OPENAI_API_KEY_HERE",
+                "OLLAMA_API_KEY": "OLLAMA_API_KEY_HERE"
+            }
+        },
+        "supabase": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@supabase/mcp-server-supabase@latest",
+                "--access-token",
+                "[YOUR_SUPABASE_ACCESS_TOKEN]"
+            ]
+        },
+        "clerk": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@clerk/agent-toolkit@latest",
+                "--secret-key",
+                "[YOUR_CLERK_SECRET_KEY]"
+            ]
+        },
+        "github": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-github",
+                "github",
+                "--token",
+                "[YOUR_GITHUB_TOKEN]"
+            ]
+        },
+        "vercel": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-vercel",
+                "--token",
+                "[YOUR_VERCEL_TOKEN]"
+            ]
+        }
+    }
+}

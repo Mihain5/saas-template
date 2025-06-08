@@ -1,0 +1,117 @@
+# Multi-Tenant SaaS Template PRD
+
+## Project Overview
+A comprehensive, production-ready SaaS template with full multi-tenancy support, designed for rapid deployment of new SaaS applications. The template uses MCP (Model Context Protocol) tools for all operations, enabling 100% cloud deployment without any local development setup.
+
+## Tech Stack
+- **Frontend**: Next.js 14 (App Router), TypeScript, Tailwind CSS + shadcn/ui
+- **Authentication**: Clerk with organizations for multi-tenancy
+- **Database**: Supabase (PostgreSQL with Row Level Security)
+- **Forms**: React Hook Form + Zod
+- **State Management**: Zustand
+- **Payments**: Stripe
+- **Deployment**: GitHub + Vercel
+
+## MCP Tools Integration
+1. **Task Master AI**: Project and task management
+2. **Supabase MCP**: All database operations
+3. **Clerk MCP**: Authentication management
+4. **GitHub MCP**: Direct code deployment
+5. **Vercel MCP**: Hosting and deployment
+
+## Core Features
+
+### 1. Multi-Tenant Architecture
+- Complete data isolation between companies
+- Automatic user/company synchronization via Clerk webhooks
+- Row Level Security (RLS) on all database tables
+- Organization-based access control
+- Support for B2B and B2B2C business models
+
+### 2. Extended User Role System
+- **super_admin**: Platform owner with full access
+- **company_admin**: Can manage their company settings and users
+- **company_user**: Regular user within a company
+- **customer**: End customer (for B2B2C scenarios)
+- Role-based permissions enforcement
+- Flexible role structure for different business models
+
+### 3. Authentication Flow
+- Clerk-based authentication with organizations
+- Protected routes with middleware
+- Automatic user creation in Supabase on sign-up
+- Organization sync between Clerk and Supabase
+
+### 4. Database Structure
+- Companies table with Clerk organization mapping
+- Users table with extended role management
+- Customer relationships table for B2B2C scenarios
+- RLS policies for complete data isolation
+- Automatic timestamps and audit fields
+
+### 5. Project Structure
+- Clean Next.js 14 App Router structure
+- Separated auth and dashboard routes
+- Modular component architecture
+- MCP configuration for all tools
+
+### 6. 100% Cloud Deployment Pipeline
+- Direct deployment to GitHub (no local git)
+- Automatic Vercel deployment
+- Environment variables managed in Vercel
+- Webhook configuration in cloud services
+- No local development server or files needed
+
+## Key Requirements
+
+### Security
+- All database operations must use RLS
+- No cross-company data leakage
+- Secure webhook endpoints
+- Environment variables only in Vercel (never in code)
+
+### Development Workflow
+- Everything deployed directly to cloud
+- No local development setup or testing
+- All operations via MCP tools
+- Systematic task tracking with Task Master
+- Modular architecture for easy feature addition/removal
+
+### Code Quality
+- TypeScript for type safety
+- Zod for runtime validation
+- Consistent error handling
+- Clear component structure
+- Modular, isolated components
+
+## Success Criteria
+1. Template can be cloned and deployed within 30 minutes
+2. New SaaS features can be added without breaking multi-tenancy
+3. Complete data isolation verified with multiple test companies
+4. All MCP tools properly configured and functional
+5. Clear documentation for customization
+6. Support for both B2B and B2B2C business models
+7. No local setup required at any point
+
+## Out of Scope
+- Local development setup
+- Database migrations (use Supabase MCP directly)
+- Custom UI framework (use shadcn/ui)
+- Alternative authentication providers
+- Non-PostgreSQL databases
+- Local environment files (.env.local)
+
+## Implementation Phases
+1. **Phase 1**: Project setup and MCP configuration
+2. **Phase 2**: Authentication and multi-tenancy
+3. **Phase 3**: Database structure and RLS (with extended roles)
+4. **Phase 4**: Core UI components and layouts
+5. **Phase 5**: Webhook integration
+6. **Phase 6**: Cloud deployment and documentation
+
+## Target Users
+- Developers building new SaaS applications
+- Teams needing multi-tenant architecture
+- Projects requiring rapid cloud deployment
+- Non-technical founders using Cursor AI
+- Businesses needing B2B2C support 
