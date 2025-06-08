@@ -32,7 +32,6 @@ You'll need to sign up for these services and get API keys:
 - **Supabase Access Token**: Get from your Supabase account settings
 - **Clerk Secret Key**: Get from your Clerk dashboard
 - **GitHub Token**: Create a personal access token in GitHub settings
-- **Vercel Token**: Get from your Vercel account settings
 
 ### 3. Add Your API Keys
 
